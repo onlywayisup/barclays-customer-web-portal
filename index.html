@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiCo</title>
+    <script id="stPingId"
+        src="https://assets.pingone.com/p1f/web-sdk/4.3.0/p1f-sdk.js?appId=2bdaf281-44e3-4009-9e9b-b9e33777f5df"
+        defer></script>
+    <script type="text/javascript" src="https://assets.pingone.com/davinci/latest/davinci.js"></script>
+    <script type="text/javascript" src="src/dav.js"></script>
+    <script type="text/javascript" src="src/index.js"></script>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="spinner hidden" id="spinner">
+        <div class="spinner-icon icon fa-solid fa-spinner fa-6x fa-spin"></div>
+    </div>
+    <div class="main-container">
+        <div id="navbar" class="navbar">
+            <div class="logo">
+                <img id="logo" src="assets/logo.png" alt="">
+            </div>
+
+            <div class="user-menu" id="user-menu">
+                <img src="assets/navbar-items.png" alt="">
+                <div id="login-button" class="navbar-button">Login</div>
+                <div id="register-button" class="navbar-button">Registration</div>
+                <div id="invitation-button" class="navbar-button">Invitation</div>
+                <div id="username" class="user-label hidden"></div>
+                <div id="logout" class="navbar-button hidden">Logout</div>
+
+            </div>
+        </div>
+        <div id="landing" class="landing">
+            <img class="landing-img" src="assets/landing.png" alt="">
+        </div>
+        <div id="home" class="home hidden">
+            <img class="home-img" src="assets/home.png" alt="">
+        </div>
+    </div>
+    <div id="widget" class="skWidget"></div>
+</body>
+
+</html>
