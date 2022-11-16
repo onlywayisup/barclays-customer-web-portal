@@ -1,8 +1,6 @@
 const dav_props = {
     companyId: "ad3aa877-b668-4dcc-af0e-8fde97ba67d1",
-    preferencesPolicyId: "iUL6OlMwI5spwBuCoZdD7GC9QhUOTuiY",
-    trxPolicyId: "9a369b200bdda575c77db3fdcefa4f20",
-    buyPolicyId: "68523fcf1ac161c101bfeb184a072da6",
+    trxPolicyId: "4c05a38df3bddfaa041f91e0a829c857",
     loginPolicyId: "111fd855471761d79b2da68dcb99aaed",
     invitationPolicyId: "d45731514f5402e6a7b4c4a55124ae34",
     registrationPolicyId: "bad093dc4a60415dd5d6c3b4e443aac5",

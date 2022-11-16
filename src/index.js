@@ -14,63 +14,23 @@ window.onload = async () => {
         .getElementById("invitation-button")
         .addEventListener("click", () => startInvitation());
 
-    document
-        .getElementById("username")
-        .addEventListener("click", () => startProfileUpdate());
+    document.getElementById("home-img").addEventListener("click", () => startTransfer());
+
     document.getElementById("logout").addEventListener("click", () => logout());
 
     skWidget = document.getElementsByClassName("skWidget")[0];
 };
 
-async function startProfileUpdate() {
-    console.log("startProfileUpdate for user " + idTokenClaims.username);
+async function startTransfer() {
+    console.log("startTransfer for user " + idTokenClaims.mail);
     showSpinner();
     await getToken();
     let parameters = {
-        username: idTokenClaims.username,
-    };
-    showWidget(
-        dav_props.preferencesPolicyId,
-        inSessionCallback,
-        errorCallback,
-        onCloseModal,
-        parameters
-    );
-}
-
-async function startDeposit() {
-    console.log("startDeposit for user " + idTokenClaims.username);
-    showSpinner();
-    await getToken();
-    let parameters = {
-        sessionId: application_session_id,
-        stToken: window["_securedTouchToken"],
-        userName: idTokenClaims.username,
+        userEmail: idTokenClaims.mail,
     };
 
     showWidget(
         dav_props.trxPolicyId,
-        inSessionCallback,
-        errorCallback,
-        onCloseModal,
-        parameters
-    );
-}
-
-async function startBuy() {
-    console.log("startBuy for user " + idTokenClaims.username);
-    let amount = document.getElementById("btc-amount").value;
-    showSpinner();
-    await getToken();
-    let parameters = {
-        sessionId: application_session_id,
-        userName: idTokenClaims.username,
-        amount: amount,
-        currency: "BTC",
-    };
-
-    showWidget(
-        dav_props.buyPolicyId,
         inSessionCallback,
         errorCallback,
         onCloseModal,
